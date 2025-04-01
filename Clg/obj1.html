@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h3>Object inside a function</h3> -->
+    <script>
+        let student = {
+            Name: "Ram",
+            course: "MCA",
+
+            show: function () {
+                return (`${this.Name} , ${this.course}`)
+            },
+            marks: {
+                maths: 90, english: 70, hindi: 80, computer: 95, science: 80
+            }
+
+        }
+        document.writeln(student.show(),"<br>")
+        document.writeln(student.marks.maths,"<br>")
+        document.writeln(student.marks.english,"<br>")
+        document.writeln(student.marks.hindi,"<br>")
+        document.writeln(student.marks.computer)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var x = [], sum = 0;
+      let marks = [];
+      let results = ""; // Initialize results variable
+
+      let n = parseInt(prompt("Enter number of students"));
+      var student = new Object();
+      for (let i = 0; i < n; i++) {
+        x[i] = prompt("Enter name of student");
+        sum = 0; // Reset sum for each student
+        for (let j = 0; j < 5; j++) {
+          marks[j] = parseFloat(prompt(`Enter marks of subject ${j + 1} :`));
+          sum += marks[j];
+        }
+
+        let perc = sum / 5;
+        student = { sname: x[i], percentage: perc };
+
+        if (student.percentage >= 85) {
+          results += `<tr><td>${student.sname}</td>
+            <td>${student.percentage.toFixed(2)}</td></tr>`;
+        }
+      }
+    </script>
+    <table border="1">
+      <tr>
+        <th>Student Name</th>
+        <th>Percentage</th>
+      </tr>
+      <script>
+        document.write(results);
+      </script>
+    </table>
+  </body>
+</html>

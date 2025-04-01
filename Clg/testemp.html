@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="emp" border="3">
+        <tr>
+            <th>EmpName</th>    
+            <th>Designation</th>        
+            <th>Department</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Ram</td>
+            <td>Manager</td>
+            <td>Account</td>
+            <td>Haridwar</td>
+        </tr>
+        <tr>
+            <td>Ravi</td>
+            <td>HR</td>
+            <td>IT</td>
+            <td>Rishikesh</td>
+        </tr>
+        <tr>
+            <td>shiv</td>
+            <td>CEO</td>
+            <td>Account</td>
+            <td>Haridwar</td>
+        </tr>
+        <tr>
+            <td>Karn</td>
+            <td>SDE</td>
+            <td>Account</td>
+            <td>Haridwar</td>
+        </tr>
+        <tr>
+            <td>Raj</td>
+            <td>Manager</td>
+            <td>Sales</td>
+            <td>Haridwar</td>
+        </tr>
+    </table><br>
+
+        <button onclick="employ()">Change</button>
+</body>
+<script>
+    function employ() {
+        let x = document.getElementById("emp");  
+        let y = x.rows.length;
+    
+        for (let i = 1; i < y; i++) { 
+            let dept = x.rows[i].cells[2].textContent.trim().toLowerCase(); 
+            if (dept === "account") {
+                x.rows[i].cells[3].textContent = "Dehradun";  
+            }
+        }
+    }
+
+</script>
+</html>

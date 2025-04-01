@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x=[],y=[],z=[];
+        var student =new Object();
+        for(i=0;i<2;i++){
+            x[i]=prompt("Enter name of student");
+            y[i]=prompt("Enter course of student");
+            z[i]=parseInt(prompt("Enter age of student"));
+            student={sname:x[i],course:y[i],age:z[i]}
+            document.writeln(student.sname," ",student.course," ",student.age,"<br>")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+    <style>
+        /* table{
+            border: 5px solid;
+        } */
+        /* th{
+            border: 5px solid;
+        }
+        td{
+            border: 5px solid green;
+        } */
+    </style>
+</head>
+<body>
+    <table id="emp" border="3">
+        <tr>
+            <th>EmpName</th>    
+            <th>Designation</th>        
+            <th>Department</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Ram</td>
+            <td>Manager</td>
+            <td>Account</td>
+            <td>Haridwar</td>
+        </tr>
+        <tr>
+            <td>Ravi</td>
+            <td>HR</td>
+            <td>IT</td>
+            <td>Rishikesh</td>
+        </tr>
+        <tr>
+            <td>shiv</td>
+            <td>CEO</td>
+            <td>Account</td>
+            <td>Haridwar</td>
+        </tr>
+        <tr>
+            <td>Karn</td>
+            <td>SDE</td>
+            <td>Account</td>
+            <td>Haridwar</td>
+        </tr>
+        <tr>
+            <td>Raj</td>
+            <td>Manager</td>
+            <td>Sales</td>
+            <td>Haridwar</td>
+        </tr>
+    </table><br>
+
+        <button onclick="employ('Account','Dehradun')">Change</button>
+   
+    
+    <script>
+         function employ(department,newcity){
+            var x=document.getElementById("emp")
+            var y=x.rows.length
+            for(var i=1;i<y;i++){
+                var dept=x.rows[i].cells[2]           
+                if(dept.textContent===department ){
+                    x.rows[i].cells[3].textContent= newcity;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
